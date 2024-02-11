@@ -1,7 +1,8 @@
 import { mockOne, mockThree, mockTwo, unmockedFunction } from './index';
 
-// eslint-disable-next-line @typescript-eslint/no-empty-function
-function nope() {}
+function nope(): void {
+  return undefined;
+}
 
 jest.mock('./index', () => {
   const originalModule =
